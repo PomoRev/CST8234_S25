@@ -1,0 +1,43 @@
+
+/* OPENING BLOCK COMMENT - THINK OF THIS AS THE TITLE AND EXECUTIVE SUMMARY. */
+
+/* anatomy.c
+ * 
+ * Prof. Frank Emanuel, Ph.D. 
+ * CST8234
+ * 2025-04-27
+ *
+ * This is the anatomy of a C programme.
+ */
+
+/* PREPROCESSOR DIRECTIVES - THINK OF THIS AS BEING LIKE THE FOOTNOTES, IT LISTS REFERENCES
+AND DESCRIBES HOW WE SHOULD READ THE PAPER. */
+
+#include <stdio.h>
+
+/* FUNCTION DECLARATIONS - THINK OF THIS AS THE TABLE OF CONTENTS */
+
+void printHello();
+
+/* THE MAIN FUNCTION - THIS IS LIKE THE INTRODUCTION AND CONCLUSION OF THE PAPER. EVERYTHING IS
+CALLED FROM THIS FUNCTION.  */
+
+int main(){
+
+    printHello();
+
+    return 0;
+}
+
+/* THE FUNCTION DEFINITIONS - THESE ARE LIKE THE CHAPTERS. EVERY CHAPTER SHOULD BE ABOUT ONLY 
+ONE THING.  */
+
+void printHello() {
+
+    printf("Hello World\n");
+
+    return;
+
+}
+
+
