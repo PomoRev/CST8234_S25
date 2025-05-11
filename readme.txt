@@ -21,6 +21,9 @@ https://youtu.be/uh5fyJnxIc4 is a video I created on basic programming concepts 
 
 Week 2: 
 
+/slides lecture 2 - the slides used in the lecture class. I will cull these after the lecture and
+    put up a new deck for the next lecture. 
+
 
 
 
