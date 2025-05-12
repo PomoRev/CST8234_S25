@@ -16,7 +16,7 @@ void anotherScope (char passedLetter){
     printf("\nlocalLetter from inside anotherScope: %c\n", localLetter++);
     printf("passedLetter from inside anotherScope: %c\n", passedLetter);
 
-    return;
+
 }
 
 char globalLetter = 'A';
