@@ -21,8 +21,16 @@ https://youtu.be/uh5fyJnxIc4 is a video I created on basic programming concepts 
 
 Week 2: 
 
+scope.c - experiment regarding code tracing and scoping of variables. 
+whatstring.c - reading the command line arguments.
+arrays.c - we looked at this code briefly and then turned to command line arguments.
+shape.c - example code exercise using problem decomposition and prioritizing tasks by dependencies.
+    Finished the tasks we were working on, and tested that the size was now a useful number. Also
+    fixed up the string array initialization, we can create an array of character pointers. 
+
 /slides lecture 2 - the slides used in the lecture class. I will cull these after the lecture and
     put up a new deck for the next lecture. 
+
 
 
 
