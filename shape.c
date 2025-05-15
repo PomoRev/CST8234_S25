@@ -13,7 +13,8 @@
     2) ensure the commandline arguments are reasonable [done]
     3) set the size as a numeric value [done]
     4) create print function that take 
-       a character and number to print
+       a character and number to print (this combines the three 
+       print functions needed)
     5) print shape of specified size (triangle, 
        square, diamond)     
 */
@@ -24,6 +25,10 @@
 #define numberOfShapes  3
 #define numberOfSizes   5
 
+#define STAR            '*'
+#define SPACE           ' '
+#define NEWLINE         '\n'
+
 int main(int argc, char *argv[]){
 
     char error = 0;
@@ -31,7 +36,7 @@ int main(int argc, char *argv[]){
     char shapeFound = 0, sizeFound = 0;
     char *shapes[] = { "triangle", "square", "diamond"};
     char *sizes[] = { "smaller", "small", "normal", "big" , "bigger"};
-    int  sizeValues[] = { 3, 5, 8, 10, 15 };
+    const int  sizeValues[] = { 3, 5, 8, 10, 15 };
 
 /*      make sure that the command line holds legitimate values. */
         
@@ -59,13 +64,16 @@ int main(int argc, char *argv[]){
 
     }
 
-    if (!error){
+    if (error){
 
-        /* temporary test code to check that number is assigned properly */
-
-        error = sizeFound;
+        printf("shape: invalid option(s)\n");
+        printf("Try 'shape [SHAPE] [SIZE]\n");
 
     }
+
+    /* temporary test code to check that number is assigned properly */
+
+    error = sizeFound;
 
     return error;
 }
