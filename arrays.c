@@ -9,8 +9,7 @@
 
 int stingLength (char *string){
     int i = 0;
-    while(string[i++] != '\0');
-    
+    while(string[i++] != '\0');    
     return i - 1;
 }
 
@@ -32,7 +31,7 @@ int main(int argc, char *argv[]){
         printf("Argument #%d: %s", i + 1, argv[i]);
         printf(" has %d characters\n", stingLength(argv[i]));
 
-        if (i < 10) argumentLengths[i - 1] = stingLength(argv[i]);
+        if (i <= 10) argumentLengths[i - 1] = stingLength(argv[i]);
 
     }
 

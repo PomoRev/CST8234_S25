@@ -22,6 +22,16 @@
 #include <stdio.h>
 #include <string.h>
 
+void printcharacter(int number, char toprintcharacter){
+
+    int i = 0;
+
+    for ( ; i < number; i++) printf("%c", toprintcharacter);
+
+    return;
+
+}
+
 #define numberOfShapes  3
 #define numberOfSizes   5
 
@@ -29,11 +39,13 @@
 #define SPACE           ' '
 #define NEWLINE         '\n'
 
+#define FALSE           0
+
 int main(int argc, char *argv[]){
 
-    char error = 0;
+    char error = FALSE;
     int i;
-    char shapeFound = 0, sizeFound = 0;
+    char shapeFound = FALSE, sizeFound = FALSE;
     char *shapes[] = { "triangle", "square", "diamond"};
     char *sizes[] = { "smaller", "small", "normal", "big" , "bigger"};
     const int  sizeValues[] = { 3, 5, 8, 10, 15 };
@@ -71,9 +83,10 @@ int main(int argc, char *argv[]){
 
     }
 
-    /* temporary test code to check that number is assigned properly */
+    /* test the print */
 
-    error = sizeFound;
+    printcharacter(14, STAR);
+    printcharacter(3, NEWLINE);
 
     return error;
 }
