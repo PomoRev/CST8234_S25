@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-int stingLength (char *string){
+int stringLength (char *string){
     int i = 0;
     while(string[i++] != '\0');
     
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
 
     if ( argc > 1 ) printf ("%12s %7s %6s\n", "Argument", " ", "Size");
 
-    for(; i < argc; i++) printf("%-20.20s  %4d\n", argv[i], stingLength(argv[i]));
+    for(; i < argc; i++) printf("%-20.20s  %4d\n", argv[i], stringLength(argv[i]));
 
     return 0;
 }

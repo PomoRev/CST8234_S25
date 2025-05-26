@@ -7,6 +7,15 @@
 
 #include <stdio.h>
 
+/* returnType functionName ( type name pair(s) ){
+
+    declarations
+    
+    instructions
+
+    return (value);
+} */
+
 int main(){
 
     int i = 0;
