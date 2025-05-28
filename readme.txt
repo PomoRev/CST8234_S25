@@ -31,6 +31,16 @@ shape.c - example code exercise using problem decomposition and prioritizing tas
 /slides lecture 2 - the slides used in the lecture class. I will cull these after the lecture and
     put up a new deck for the next lecture. 
 
+Week 3(4):
+
+shape.c - example code exercise continued with writing our first utility function.
+printfunction.c - showing some of the functionality of the standard print function.
+funstuff.c - used for examples around the structure of functions as well as a loop to list all ASCII
+    characters to see if extended ASCII is supported by default. Also demonstrated what happens when 
+    you try to print an escape character.
+inputtest.c - demonstration of some of the limitations of the standard scan function. We also talked
+    about the concept of streams. 
+
 
 
 

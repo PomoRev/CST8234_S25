@@ -14,7 +14,7 @@
     3) set the size as a numeric value [done]
     4) create print function that take 
        a character and number to print (this combines the three 
-       print functions needed)
+       print functions needed) [done]
     5) print shape of specified size (triangle, 
        square, diamond)     
 */
