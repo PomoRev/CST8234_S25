@@ -17,7 +17,8 @@ int main(){
 
     int * pointer = NULL;
 
-    /* get the address of where number is located in memory and put that in the pointer */
+    /* get the address of where number is located in memory 
+       and put that in the pointer */
 
     pointer = &number;
 
