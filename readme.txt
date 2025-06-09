@@ -41,9 +41,24 @@ funstuff.c - used for examples around the structure of functions as well as a lo
 inputtest.c - demonstration of some of the limitations of the standard scan function. We also talked
     about the concept of streams. 
 
+/slides lecture 3 - slides for the lecture class.
 
 
+Week 4:
 
+pointers.c - example code of the basics of pointers in C.
+lecture4example.c - looking at the address returned by dynamic memory allocation.
+favnum.c - example code exercise using dynamic memory allocation (in progress)
+allocate.c - the favourite number example completed for comparison purposes.
+
+/slides lecture 4 - slides for the lecture class. 
+
+Week 5: 
+
+favnum.c - example code exercise.
+
+
+/slides lecture 5 - slides for the lecture class.
 
 
 * Note: other code not mentioned consists of starting code for examples I plan on using in future lectures.

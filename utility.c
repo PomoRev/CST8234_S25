@@ -9,7 +9,7 @@
 
 void clearinputbuffer(){
 
-    /* throw away extra characters on the buffer */
+    /* throw away extra characters on the input buffer */
 
     char c;
     while ((c = getchar()) != '\n' && c != EOF);
