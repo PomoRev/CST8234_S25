@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "utility.h"
 
 #define FALSE 0
 
@@ -32,6 +33,14 @@ int countlist (int * thelist){
 
 }
 
+int * createList(){
+
+    int * toReturn = (int *)malloc( sizeof(int) );
+    *(toReturn) = -1;
+
+    return toReturn;
+}
+
 
 int * addnumber( int * thelist){
 
@@ -48,6 +57,8 @@ int * addnumber( int * thelist){
     printf("gimme some number love: ");
     scanf("%d", &numbertoadd );
 
+    clearinputbuffer();
+
     if (numbertoadd < 0){
 
         printf("come on man, are you serious!\n");
@@ -55,14 +66,17 @@ int * addnumber( int * thelist){
     } else {
 
         numberofnumbers = countlist( thelist );
+
         thelist = (int *)realloc( thelist, (sizeof(int) * (numberofnumbers + 1)));
 
         if (thelist != NULL){
 
-            *(thelist + numberofnumbers++) = numbertoadd;
+            *(thelist + (numberofnumbers -1)) = numbertoadd;
             *(thelist + numberofnumbers) = -1;
             templist = thelist;
+        
         }
+
     }
 
     return templist;
@@ -76,9 +90,8 @@ int main(){
 
     char exit = FALSE;
     int  choice = 0;
-    int * numberlist = (int *)malloc( sizeof(int) );
+    int * numberlist = createList();
 
-    *numberlist = -1;
 
     while (!exit){
         /*     show menu */
@@ -100,21 +113,17 @@ int main(){
             case 2 : numberlist = addnumber(numberlist);
                      break;
 
+            case 3 : free(numberlist);
+                     numberlist = createList();
+                     break;
+
             case 4 : exit = !FALSE;
                      printf("bye\n");
                      break;
 
             default : printf( "no clue what that means!/n");
 
-        }
-
-/*         display list */
-
-           
-/*         add number to list */
-/*         purge list */
-
-           
+        }      
 
     }
 
