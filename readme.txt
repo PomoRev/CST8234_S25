@@ -56,9 +56,15 @@ allocate.c - the favourite number example completed for comparison purposes.
 Week 5: 
 
 favnum.c - example code exercise.
-
+utility.h and utility.c - creating our own library and the use of header guards on macros.
 
 /slides lecture 5 - slides for the lecture class.
+
+Week 6: (MIDTERM EXAM)
+memory.c - basics of using pointer notation on arrays. 
+
+/slides lecture 6 - slides for the tutorial after the midtern (12:15PM)
+
 
 
 * Note: other code not mentioned consists of starting code for examples I plan on using in future lectures.
