@@ -62,6 +62,7 @@ utility.h and utility.c - creating our own library and the use of header guards 
 
 Week 6: (MIDTERM EXAM)
 memory.c - basics of using pointer notation on arrays. 
+2darray.c - wrote the code together, but also documented it from home.
 
 /slides lecture 6 - slides for the tutorial after the midtern (12:15PM)
 

@@ -13,9 +13,13 @@
 
 int main(){
 
+    /* iterators */
+
     int i, j;
 
-    /* create the matrix */
+    /* create the matrix in two dimensions, first a list for the pointers, 
+       then initialize the list elements as pointers to lists of integers.
+     */
 
     int ** array = (int **)malloc(ROWS * sizeof(int *));
 
@@ -25,7 +29,13 @@ int main(){
 
     }
 
-    /* initialize the martix */ 
+    /* initialize the martix, using pointer notation is the safest way 
+       to traverse the 2 dimensional array. Note that we are using the outer
+       * to derefernce the address and is the value of array+i. 
+       You could read  *(*(array + i) + j) = as assign to the content of the
+       pointer which is the content of the array at i and addressing the jth
+       element of that array of integers at that location.
+     */ 
 
     for(i=0; i<ROWS; i++){
 
@@ -35,7 +45,7 @@ int main(){
 
     }
 
-    /* use the matrix */
+    /* use the matrix  */
 
     for(i=0; i<ROWS; i++){
 
@@ -45,7 +55,11 @@ int main(){
         printf("\n");
     }
 
-    /* free matrix */
+    /* free matrix - note the order of operations here. If you free up
+       the array first then you have no way to address the allocated integer
+       arrays. So you need to do the free in the reverse order as you did 
+       the creation.
+     */
 
 
 
@@ -56,6 +70,12 @@ int main(){
     }
 
     free (array);
+
+    /* Note that a more complete code would include guards against trying
+       to use memory that was not actually allocated. Knowing that malloc() 
+       will return a NULL pointer if it fails, is what you need to catch. 
+     */ 
+
 
     return 0;
 }
