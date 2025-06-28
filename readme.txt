@@ -66,6 +66,10 @@ memory.c - basics of using pointer notation on arrays.
 
 /slides lecture 6 - slides for the tutorial after the midtern (12:15PM)
 
+Week 7:
+structures.c - code for playing with complex data. 
+structurescomplete.c - fully implemented 3D chase code with prompts for code modification.
 
+/slides lecture 7 - slides for the lecture class.
 
 * Note: other code not mentioned consists of starting code for examples I plan on using in future lectures.
