@@ -8,6 +8,10 @@
     #define TRUE !FALSE 
 #endif
 
+typedef char bool;
+
+/* utility structures */
+
 /* utility functions */
 
 void clearinputbuffer();

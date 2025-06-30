@@ -35,16 +35,16 @@ void displayGrid( char grid[(WIDTH * HEIGHT) * DEPTH] ){
     */ 
     
     for (k=0; k<DEPTH; k++){
-        printf("Level %d\n", k+1);
-        for(l=0;l<(WIDTH + 2);l++) printf ("#");
+        /* printf("Level %d\n", k+1);
+        for(l=0;l<(WIDTH + 2);l++) printf ("#"); */
         printf("\n");
         for (; i<(HEIGHT + (HEIGHT * k)); i++){
-            printf("#");
+/*             printf("#"); */
             for (j=0; j<WIDTH; j++) printf("%c", grid[(i * WIDTH) + j] );
-            printf("#\n");
+/*             printf("#\n"); */
         }
-        for(l=0;l<(WIDTH + 2);l++) printf ("#");
-        printf("\n");
+/*         for(l=0;l<(WIDTH + 2);l++) printf ("#");
+        printf("\n"); */
     }
 
     return;

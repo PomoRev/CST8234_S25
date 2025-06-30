@@ -18,7 +18,7 @@
 
 #define     WIDTH  3
 #define     HEIGHT 3
-#define     DEPTH  2
+#define     DEPTH  4
 
 /* define utility macros and types using header guards */ 
 
