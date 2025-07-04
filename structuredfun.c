@@ -44,8 +44,6 @@ struct Enemy {
 };
 
 
-
-
 /* functions */
 
 int main(){
