@@ -73,3 +73,9 @@ structurescomplete.c - fully implemented 3D chase code with prompts for code mod
 /slides lecture 7 - slides for the lecture class.
 
 * Note: other code not mentioned consists of starting code for examples I plan on using in future lectures.
+
+Week 8:
+linkedlist.c - code for playing with dynamic data collections
+
+/slides lecture 8 - slides for the lecture class.
+
