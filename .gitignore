@@ -2,3 +2,6 @@ inputter
 shape
 structures
 a.out
+*.o
+hexed
+utility.h.gch

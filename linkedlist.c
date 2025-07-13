@@ -14,17 +14,21 @@ typedef struct Word{
 
     char * word;
     Wordptr next;
+    Wordptr prev;
 
 } Word;
 
 int main(){
 
+    Wordptr head;
     char word[8] = "example";
     Wordptr startingpoint = NULL;
-    Wordptr head = (Wordptr)malloc(sizeof(Word));
+
+    head = (Wordptr)malloc(sizeof(Word));
         
     head->word = word;
     head->next = NULL;
+    head->prev = NULL;
 
     startingpoint = head;
 
