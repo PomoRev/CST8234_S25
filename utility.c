@@ -17,4 +17,14 @@ void clearinputbuffer(){
 
 }
 
+int stringlen( char * string ){
+
+    /* count the number of characters in a string 
+       excluding the null character '\0' */ 
+
+    int count = 0;
+    while ( string[count] != '\0' ) count++; 
+    return count;
+}
+
 

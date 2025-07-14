@@ -15,3 +15,4 @@ typedef char bool;
 /* utility functions */
 
 void clearinputbuffer();
+int  stringlen(char * string);
