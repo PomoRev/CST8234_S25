@@ -5,3 +5,5 @@ a.out
 *.o
 hexed
 utility.h.gch
+meow
+num.bin
