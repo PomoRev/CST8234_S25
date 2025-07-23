@@ -1,3 +1,9 @@
+/* NOTE THIS IS SIMPLY AFTER I DEBUGGED THE ONE WE WERE WORKING ON IN CLASS.
+IT BEHAVES AS EXPECTED BUT INSTEAD OF ADDING IT TO THE BTREE WE ARE PRINTING
+EACH WORD IN SQUARE BRACKETS TO SHOW IT STOPS AT THE END OF THE FILE, AND THAT 
+IT ONLY CAPTURES ALPHABETIC WORDS IN LOWERCASE. */ 
+
+
 /* btree.c   -> aw (analyze words)
  * 
  * Prof. Frank Emanuel, Ph.D. 
@@ -42,7 +48,7 @@ int main(int argc, char ** argv){
 
     int error = 0;
     FILE * fp = NULL;
-    Tree * wordtreeroot = NULL;
+    /* Tree * wordtreeroot = NULL; */
     char * word = NULL;
 
     /* open the file */
@@ -59,11 +65,11 @@ int main(int argc, char ** argv){
 
             /* add fetched word to the tree */
 
-printf("[%s]", word);
+            printf("[%s]", word);
 
         }
 
-printf("\n");
+        printf("\n");
 
         /* done with the file, so we close it */
         
@@ -80,30 +86,22 @@ printf("\n");
 
 char * getnxtword(FILE * fp){
 
-/*  takes a file pointer to an open file and fetches characters 
-    until it finds a word to return or NULL if the file end is reached. 
- */
-
     char buffer[BUFFERSIZE];
     char ch;
     int i, count = 0;
     char * newword = NULL;
 
     /* throw away non alphabetic characters and catch the end of the file */
-
     while (((ch = toLower(fgetc(fp))) < 'a') || (ch > 'z'))
         if (ch == EOF) break;
-
-    /* if we have a an alphabetic collect it with any 
-       following letters in the buffer */
 
     if (ch != EOF){
 
         do { 
 
-            buffer[count++] = ch;
+            ch = toLower(ch);
 
-            /* get another possible letter */
+            buffer[count++] = ch;
 
             ch = toLower(fgetc(fp));
 
@@ -114,18 +112,15 @@ char * getnxtword(FILE * fp){
         if (count > 0){
             newword = (char *) malloc (sizeof(char) * (count + 1));
 
-            /* copy the word into the allocated space */
-
             for(i=0; i < count; i++) 
                 newword[i] = buffer[i];
-
-            /* make it a real string by ending with a null character */
-
             newword[count] = '\0';
 
         } 
     }
+    else newword = NULL; 
 
     return newword;
+
 }
 
