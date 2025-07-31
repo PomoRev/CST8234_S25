@@ -19,21 +19,23 @@
 
 #define BUFFERSIZE  20
 
-typedef struct {
+typedef struct Tree Tree;
+
+struct Tree {
 
     char * word;
     int count;
-    struct Tree * lefty;
-    struct Tree * righty;
+    Tree * lefty;
+    Tree * righty;
 
-} Tree;
+};
 
 char * getnxtword(FILE * fp);
 char toLower(char ch) { 
     if ((ch >= 'A') && (ch <= 'Z')) ch += ('a' -'A'); 
     return ch;
 }
-void addtotree(char *, Tree *);
+Tree * addtotree(char *, Tree *);
 void printtree(Tree *);
 
 int main(int argc, char ** argv){
@@ -59,7 +61,7 @@ int main(int argc, char ** argv){
 
             /* add fetched word to the tree */
 
-printf("[%s]", word);
+            wordtreeroot = addtotree(word, wordtreeroot);
 
         }
 
@@ -129,3 +131,41 @@ char * getnxtword(FILE * fp){
     return newword;
 }
 
+Tree * addtotree(char * word, Tree * treenode){
+
+    int compare;
+
+/*     check if tree node is null
+        add new node here and end */ 
+
+    if ( treenode == NULL ) {
+
+        /* i have a new word */
+
+        treenode = (Tree *)malloc(sizeof(Tree));
+
+        treenode->word = word;
+        treenode->count = 1;
+        treenode->lefty = NULL; 
+        treenode->righty = NULL;
+
+        printf("added node for %s", treenode->word);
+
+    } else {
+
+    /*     move through the binary tree checking if the current word 
+    in the a match, or > or < the word in the node. */
+
+        compare = strcmp(word, treenode->word);
+
+        if (compare > 0) 
+            treenode->righty = addtotree(word, treenode->righty);
+        else if (compare < 0) 
+            treenode->lefty = addtotree(word, treenode->lefty);
+        else 
+            treenode->count++;
+
+    }
+
+    return treenode;
+}
