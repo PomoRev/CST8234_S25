@@ -40,12 +40,12 @@ void printtree(Tree *);
 
 int main(int argc, char ** argv){
 
-
-
     int error = 0;
     FILE * fp = NULL;
     Tree * wordtreeroot = NULL;
     char * word = NULL;
+
+    printtree(wordtreeroot);
 
     /* open the file */
 
@@ -65,8 +65,6 @@ int main(int argc, char ** argv){
 
         }
 
-printf("\n");
-
         /* done with the file, so we close it */
         
         fclose(fp);
@@ -76,6 +74,7 @@ printf("\n");
     
     /* print the tree with counts */
 
+    printtree(wordtreeroot);
 
     return error;
 }
@@ -149,8 +148,6 @@ Tree * addtotree(char * word, Tree * treenode){
         treenode->lefty = NULL; 
         treenode->righty = NULL;
 
-        printf("added node for %s", treenode->word);
-
     } else {
 
     /*     move through the binary tree checking if the current word 
@@ -168,4 +165,18 @@ Tree * addtotree(char * word, Tree * treenode){
     }
 
     return treenode;
+}
+
+void printtree( Tree * root){
+
+    if (root != NULL){
+
+        printf("%s (%d)\n", root->word, root->count);
+
+        if ( root->lefty != NULL) printtree(root->lefty);
+        if ( root->righty != NULL) printtree(root->righty);
+
+    }
+
+    return;
 }
